@@ -25035,7 +25035,7 @@
 	var React = __webpack_require__(8);
 	
 	var WeatherForm = __webpack_require__(226);
-	var WeatherMessage = __webpack_require__(227);
+	var WeatherMessage = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./WeatherMessage\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	var openWeatherMap = __webpack_require__(228);
 	
 	var Weather = React.createClass({
@@ -25076,7 +25076,7 @@
 	      if (isLoading) {
 	        return React.createElement(
 	          'h3',
-	          null,
+	          { className: 'text-center' },
 	          'Loading weather...'
 	        );
 	      }
@@ -25089,9 +25089,9 @@
 	      'div',
 	      null,
 	      React.createElement(
-	        'h3',
-	        null,
-	        'Weather Component'
+	        'h1',
+	        { className: 'text-center' },
+	        'Get Weather'
 	      ),
 	      React.createElement(WeatherForm, { onSearch: this.handleSearch }),
 	      renderMessage()
@@ -25123,19 +25123,10 @@
 	  },
 	  render: function render() {
 	    return React.createElement(
-	      'div',
-	      null,
-	      React.createElement(
-	        'h3',
-	        null,
-	        'Get Weather'
-	      ),
-	      React.createElement(
-	        'form',
-	        { onSubmit: this.onSubmit },
-	        React.createElement('input', { type: 'text', name: 'location', ref: 'location', placeholder: 'Enter city name' }),
-	        React.createElement('input', { type: 'submit', value: 'Get Weather' })
-	      )
+	      'form',
+	      { onSubmit: this.onSubmit },
+	      React.createElement('input', { type: 'text', name: 'location', ref: 'location', placeholder: 'Enter city name' }),
+	      React.createElement('input', { className: 'button expanded hollow', type: 'submit', value: 'Get Weather' })
 	    );
 	  }
 	});
@@ -25143,27 +25134,7 @@
 	module.exports = WeatherForm;
 
 /***/ }),
-/* 227 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var React = __webpack_require__(8);
-	
-	var WeatherMessage = function WeatherMessage(_ref) {
-	  var temp = _ref.temp,
-	      location = _ref.location;
-	
-	  return React.createElement(
-	    'p',
-	    null,
-	    'It is now ' + temp + '\xB0 in ' + location
-	  );
-	};
-	
-	module.exports = WeatherMessage;
-
-/***/ }),
+/* 227 */,
 /* 228 */
 /***/ (function(module, exports, __webpack_require__) {
 
