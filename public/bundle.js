@@ -26769,8 +26769,8 @@
 	        'li',
 	        null,
 	        React.createElement(
-	          Link,
-	          { to: 'https://reactjs.org/' },
+	          'a',
+	          { href: 'https://reactjs.org/' },
 	          'ReactJS'
 	        )
 	      ),
@@ -26778,8 +26778,8 @@
 	        'li',
 	        null,
 	        React.createElement(
-	          Link,
-	          { to: 'https://openweathermap.org/' },
+	          'a',
+	          { href: 'https://openweathermap.org/' },
 	          'OpenWeatherMap'
 	        )
 	      ),
@@ -26787,8 +26787,8 @@
 	        'li',
 	        null,
 	        React.createElement(
-	          Link,
-	          { to: 'https://github.com/ariksasmita/ReactWeather' },
+	          'a',
+	          { href: 'https://github.com/ariksasmita/ReactWeather' },
 	          'Github Repository'
 	        )
 	      )
