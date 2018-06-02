@@ -26745,11 +26745,54 @@
 	
 	var React = __webpack_require__(8);
 	
+	var _require = __webpack_require__(166),
+	    Link = _require.Link;
+	
 	var About = function About(props) {
 	  return React.createElement(
-	    'h3',
+	    'div',
 	    null,
-	    'About'
+	    React.createElement(
+	      'h1',
+	      { className: 'text-center' },
+	      'About'
+	    ),
+	    React.createElement(
+	      'p',
+	      null,
+	      'Welcome to about page. This app made with React from Facebook and using API from OpenWeatherMap. Links can be found below, with Github repo to tihs project as well'
+	    ),
+	    React.createElement(
+	      'ul',
+	      null,
+	      React.createElement(
+	        'li',
+	        null,
+	        React.createElement(
+	          Link,
+	          { to: 'https://reactjs.org/' },
+	          'ReactJS'
+	        )
+	      ),
+	      React.createElement(
+	        'li',
+	        null,
+	        React.createElement(
+	          Link,
+	          { to: 'https://openweathermap.org/' },
+	          'OpenWeatherMap'
+	        )
+	      ),
+	      React.createElement(
+	        'li',
+	        null,
+	        React.createElement(
+	          Link,
+	          { to: 'https://github.com/ariksasmita/ReactWeather' },
+	          'Github Repository'
+	        )
+	      )
+	    )
 	  );
 	};
 	
