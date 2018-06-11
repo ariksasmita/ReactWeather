@@ -8,15 +8,15 @@ module.exports = {
     var requestUrl = `${ OPEN_WEATHER_MAP_URL }&q=${ encodedLocation }`
 
     return axios.get(requestUrl).then(
-      function(res){
-        if(res.data.cod && res.data.message){
-          throw new Error(res.data.message)
+      function(resp){
+        if(resp.response && resp.response.data.cod && resp.response.data.message){
+          throw new Error(res.response.data.message)
         } else {
-          return res.data.main.temp
+          return resp.data.main.temp
         }
       },
-      function(res){
-        throw new Error(res.data.message)
+      function(resp){
+        throw new Error(resp.response.data.message)
       }
     )
   }
