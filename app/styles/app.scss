@@ -1,5 +1,9 @@
+$space-large: 2.5rem;
+$title-color: #555;
+
 .page-title {
-  margin: 2.5rem 0;
+  margin: $space-large 0;
+  color: $title-color;
 }
 
 input[type="search"] {
